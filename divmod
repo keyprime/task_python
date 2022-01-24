@@ -1,6 +1,29 @@
-# input: n, k - string
-# output: 
+# дележ яблок
+# input: n, k - string: positive integer
+# output: int, int
 n = int(input())
 k = int(input())
 print(k // n)     # деление нацело
 print(k % n)      # деление с остатком
+
+# электронные часы
+# input: time - string: positive integer
+# output: int, int
+time = int(input())
+hours = time % (60 * 24) // 60
+minutes = time % 60
+print(hours, minutes) # print(time // 60 % 24, time % 60)
+
+time = int(input())
+seconds = time % 60             # число от 0 до 59
+minutes = time % 3600 // 60     # % 3600 количество секунд в часе // 60 минут в часе
+hours = time // 3600 % 24       # // 3600 количество секунд в часе % 24 количество часов в сутках
+print("%d:%02d:%02d" % (hours, minutes, seconds))
+
+# парты
+# input: a, b, c - string: positive integer
+# output: int
+a = int(input())
+b = int(input())
+c = int(input())
+print(a // 2 + b // 2 + c // 2 + a % 2 + b % 2 + c % 2)
