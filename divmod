@@ -1,0 +1,6 @@
+# input: n, k - string
+# output: 
+n = int(input())
+k = int(input())
+print(k // n)     # деление нацело
+print(k % n)      # деление с остатком
