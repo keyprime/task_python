@@ -60,8 +60,10 @@ b = int(input())
 c = int(input())
 print(a // 2 + b // 2 + c // 2 + a % 2 + b % 2 + c % 2)
 
-a = int(input())
-b = int(input())
-c = int(input())
-d = a + b + c
-print(d // 2 + d % 2)
+a = int(input())  # 20
+b = int(input())  # 21
+c = int(input())  # 22
+d = a + b + c     # 63 всего учеников
+div = d // 2      # 31 парта для двух учеников
+mod = d % 2       # 1  парта для одного ученика
+print(div + mod)  # 31+1=32 парты
