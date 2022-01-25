@@ -32,7 +32,7 @@ minutes = time % 60
 print(hours, minutes) 
 
 time = int(input())
-hours = time // 60 % 24
+hours = time // 60 % 24   # не больше 24 часов
 minutes = time % 60
 print(hours, minutes)
 
