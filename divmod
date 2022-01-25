@@ -29,7 +29,12 @@ print("Сумма цифр числа:", a + b + c)                # a+b+c=6+7+2
 time = int(input())
 hours = time % (60 * 24) // 60
 minutes = time % 60
-print(hours, minutes) # print(time // 60 % 24, time % 60)
+print(hours, minutes) 
+
+time = int(input())
+hours = time // 60 % 24
+minutes = time % 60
+print(hours, minutes)
 
 time = int(input())
 seconds = time % 60             # число от 0 до 59
@@ -37,15 +42,15 @@ minutes = time % 3600 // 60     # % 3600 количество секунд в ч
 hours = time // 3600 % 24       # // 3600 количество секунд в часе % 24 количество часов в сутках
 print("%d:%02d:%02d" % (hours, minutes, seconds))
 
-n = int(input())
-if n < 1440:
-    print (n // 60)
-    print (n % 60)
+time = int(input())
+if time < 1440:         # меньше суток 60 * 24 = 1440
+    print (time // 60)  # часы
+    print (time % 60)   # минуты
 else:
-    a = 1440 - n
+    a = 1440 - time     # больше суток 60 * 24 = 1440
     a *= -1
-    print(a // 60)
-    print(a % 60)
+    print(a // 60)      # часы
+    print(a % 60)       # минуты
 
 # парты
 # input: a, b, c - string: positive integer
