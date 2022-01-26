@@ -11,8 +11,8 @@ num // 100 % 10   # третья справа цифра числа
 Предпоследняя цифра: (num % 10^2) // 10^1;
 Предпредпоследняя цифра: (num % 10^3) // 10^2;
 .....
-Вторая цифра: (num % 10^n-1) // 10^n-2;
-Первая цифра: (num % 10^n) // 10^n-1.
+Вторая цифра: (num % 10^(n-1)) // 10^(n-2);
+Первая цифра: (num % 10^n) // 10^(n-1).
 
 # дележ яблок
 # input: n, k - string: positive integer
@@ -44,6 +44,13 @@ bc = int(input())
 last_digit = bc % 10
 first_digit = bc // 10
 print('Искомое число =', last_digit * 10 + first_digit)
+
+# вывод четного числа следующего за positive_integer>1000
+num = int(input())
+if num % 2 == 0:
+    print(num + 2)
+else:
+    print(num + 1)
 
 # электронные часы
 # input: time - string: positive integer
