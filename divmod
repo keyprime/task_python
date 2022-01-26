@@ -99,8 +99,9 @@ print(div + mod)  # 31+1=32 парты
 
 # МКАД = 109 км
 # start from 0 км, finish on ...км?
-v = int(input()) # скорость
-t = int(input()) # время
-s = v * t
-num = (109 + s % 109) % 109
+# output: positive integer от 0 до 108
+v = int(input()) # скорость 60; v<0; v>0
+t = int(input()) # время 2
+s = v * t        # 120
+num = (109 + s % 109) % 109  # 11
 print(num)
